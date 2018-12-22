@@ -42,11 +42,9 @@ class US(Normalizer):
         '925',
     ]
 
-    @staticmethod
     def is_eligible(n):
         return any((n.startswith(code) for code in US.AREA_CODES))
 
-    @staticmethod
     def normalize(n):
         return '1' + n
 
